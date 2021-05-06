@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout1"
+    android:background="#e8e8e8"
+    android:layout_height="match_parent">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pick_photo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_toEndOf="@id/imageView_profile"
+        android:src="@drawable/ic_baseline_photo_camera_24"
+        app:civ_border_color="#0DFFB300"
+        app:civ_border_width="2sp" />
+
+    <ImageView
+        android:id="@+id/edit_profile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="238dp"
+        android:layout_toEndOf="@id/profileTextView"
+        android:src="@drawable/ic_edit" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/u"
+        app:civ_border_color="#0DFFB300"
+        app:civ_border_width="2dp">
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/profileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/grey_border"
+        android:drawablePadding="10dp"
+        android:padding="15dp"
+        android:text="Md Sahil"
+        android:textAlignment="center"
+        android:textColor="#818181"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_man" />
+    <TextView
+        android:id="@+id/profileTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/grey_border"
+        android:drawablePadding="10dp"
+        android:padding="15dp"
+        android:text="sahilm5332@gmail.com"
+        android:textColor="#818181"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_email" />
+
+    <ImageView
+        android:id="@+id/edit_email"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="355dp"
+        android:layout_toEndOf="@+id/profileTextView2"
+        android:src="@drawable/ic_edit" />
+    <TextView
+        android:id="@+id/phone_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileTextView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/grey_border"
+        android:drawablePadding="10dp"
+        android:padding="15dp"
+        android:text="8910282656"
+        android:textColor="#818181"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_call" />
+
+    <ImageView
+        android:id="@+id/edit_phoneNo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="472dp"
+        android:layout_toEndOf="@id/phone_textView"
+        android:src="@drawable/ic_edit" />
+
+</RelativeLayout>

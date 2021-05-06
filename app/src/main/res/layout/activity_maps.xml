@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/relativeLayout"
+    tools:context=".MapsActivity"
+    >
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        map:endIconContentDescription="open map icon"
+        map:endIconDrawable="@drawable/ic_search"
+        map:endIconMode="custom"
+        map:endIconTint="#747474"
+        map:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_backgroud"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_queslocation"
+            android:hint="search Place..."
+            android:inputType="textPostalAddress"
+            android:padding="10dp"
+            android:textColor="#5b5b5b"
+            android:textCursorDrawable="@null" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/setLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/border_backgroud"
+        android:onClick="setAddress"
+        android:padding="12dp"
+        android:text="Set Address"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/showMyLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/border_backgroud"
+        android:onClick="showMyLocation"
+        android:padding="12dp"
+        android:text=" your location"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>
+

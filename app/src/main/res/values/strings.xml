@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Easy Transport App</string>
+    <string name="forget_password"><u>Forget Password?</u></string>
+    <string name="you_have_nt_an_account"><u>You have\'nt an account?</u></string>
+    <string name="pick_image"><u>Pick Image</u></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="edit_your_profile"><u>Edit Your Profile</u></string>
+    <string name="name"><u>NAME</u></string>
+    <string name="email"><u>EMAIL</u></string>
+    <string name="phone_n0"><u>PHONE N0</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="choose_location"><u>Choose Location</u></string>
+    <string name="title_activity_maps">Map</string>
+    <string name="pickup_address"><u>PickUp Address</u></string>
+    <string name="delivery_address"><u>Delivery Address</u></string>
+    <string name="select_vehicletype"><![CDATA[Select VehicleType -> ]]></string>
+    <string name="title_activity_navigation">Map</string>
+    <string name="title_activity_nav">Map</string>
+
+
+</resources>

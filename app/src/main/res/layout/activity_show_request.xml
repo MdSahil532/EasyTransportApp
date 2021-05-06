@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_linear"
+    android:background="#e8e8e8"
+    android:orientation="vertical"
+    tools:context=".ShowRequest">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_show"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/input_layout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:hintEnabled="false"
+           app:endIconMode="custom"
+           android:elevation="10dp"
+           app:endIconContentDescription="open map icon"
+           app:endIconDrawable="@drawable/ic_location"
+           app:endIconTint="#747474"
+           android:layout_marginTop="50dp"
+           android:layout_marginStart="20dp"
+           android:layout_marginEnd="20dp"
+           >
+
+           <EditText
+               android:id="@+id/chooseLocation"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:tag="3"
+               android:maxLines="10"
+               android:ems="10"
+               android:padding="15dp"
+               android:textColor="#5b5b5b"
+               android:textCursorDrawable="@null"
+               android:hint="Enter address "
+               android:background="@drawable/border_backgroud"
+               />
+
+       </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/showDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="135dp"
+            android:layout_marginStart="135dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_background"
+            android:elevation="5dp"
+            android:onClick="requestShow"
+            android:padding="10dp"
+            android:text="Show"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

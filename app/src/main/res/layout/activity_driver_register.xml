@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DriverRegister">
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_r"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sc1"
+        android:background="#e8e8e8"
+        >
+
+    <LinearLayout
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:id="@+id/linear_layoutSc"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:id="@+id/ownerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:ems="10"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#5b5b5b"
+            android:textCursorDrawable="@null"
+            android:hint="Owner Name"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/grey_border"
+
+            />
+        <EditText
+            android:id="@+id/ownerNo"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:textColor="#5b5b5b"
+            android:ems="10"
+            android:textCursorDrawable="@null"
+            android:layout_gravity="center_horizontal"
+            android:hint="Owner Phone No"
+            android:padding="12dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/grey_border"
+            />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/grey_border"
+            android:elevation="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center_horizontal"
+            >
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:endIconMode="custom"
+                app:endIconContentDescription="open map icon"
+                app:endIconDrawable="@drawable/ic_location"
+                app:endIconTint="#747474"
+                >
+                <EditText
+                    android:id="@+id/address_l"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:hint="Address"
+                    android:padding="12dp"
+                    android:ems="10"
+                    android:gravity="top"
+                    android:textColor="#5b5b5b"
+                    android:textCursorDrawable="@null"
+                    android:tag="4"
+                    android:textAlignment="gravity"
+                    android:background="@drawable/grey_border"
+                    android:inputType="textMultiLine"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/vehicleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:textColor="#5b5b5b"
+            android:ems="10"
+            android:textCursorDrawable="@null"
+            android:background="@drawable/grey_border"
+            android:elevation="3dp"
+            android:hint="Vehicle Name"
+            android:inputType="textPersonName"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/vehicleNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="30dp"
+            android:textColor="#5b5b5b"
+            android:textCursorDrawable="@null"
+            android:layout_marginStart="30dp"
+            android:ems="10"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/grey_border"
+            android:elevation="3dp"
+            android:hint="Vehicle No"
+            android:padding="12dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/grey_border"
+            android:elevation="3dp">
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/goods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Goods"
+                    android:textColor="#940C0C0C" />
+
+                <RadioButton
+                    android:id="@+id/luxury"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Luxury"
+                    android:textColor="#940C0C0C" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:text="Vehicle Type"
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="40dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="60dp"
+            android:onClick="registerDriver"
+            android:elevation="8dp"
+            android:background="@drawable/button_background"
+            android:padding="10dp"
+            android:text="Register"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
+
+
+    </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

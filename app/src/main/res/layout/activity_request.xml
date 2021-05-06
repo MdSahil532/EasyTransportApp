@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linear_layout"
+    tools:context=".RequestActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_request"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    <ScrollView
+            android:id="@+id/sc1"
+            android:background="#e8e8e8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:id="@+id/r_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/pick_location"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="25dp"
+                    android:tag="1"
+                    android:layout_marginTop="45dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_location"
+                    app:civ_border_color="#FFFFFF"
+                    app:civ_border_width="2dp" />
+
+                <EditText
+                    android:id="@+id/pickUp_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginStart="20dp"
+                    android:ems="10"
+                    android:textCursorDrawable="@null"
+                    android:layout_marginTop="50dp"
+                    android:textColor="#5b5b5b"
+                    android:background="@drawable/grey_border"
+                    android:gravity="top"
+                    android:hint="Pick Up Address"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:textAlignment="gravity">
+                </EditText>
+                <EditText
+                    android:id="@+id/pickUp_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp"
+                    android:textColor="#5b5b5b"
+                    android:ems="10"
+                    android:padding="10dp"
+                    android:inputType="number"
+                    android:textCursorDrawable="@null"
+                    android:hint="Pick Up Contact"
+                    android:background="@drawable/grey_border"
+                    android:layout_marginEnd="80dp"
+                    android:layout_below="@+id/pickUp_address"
+                    >
+                </EditText>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/Delivery_location"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="339dp"
+                    android:tag="2"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_location"
+                    app:civ_border_color="#FFFFFF"
+                    app:civ_border_width="2dp" />
+
+                <EditText
+                    android:id="@+id/delivery_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/pickUp_contact"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:ems="10"
+                    android:textColor="#5b5b5b"
+                    android:layout_marginTop="50dp"
+                    android:textCursorDrawable="@null"
+                    android:background="@drawable/grey_border"
+                    android:gravity="top"
+                    android:hint="Delivery Address"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:textAlignment="gravity" />
+
+                <EditText
+                    android:id="@+id/delivery_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp"
+                    android:padding="10dp"
+                    android:textColor="#5b5b5b"
+                    android:ems="10"
+                    android:textCursorDrawable="@null"
+                    android:inputType="number"
+                    android:hint="Delivery Contact"
+                    android:background="@drawable/grey_border"
+                    android:layout_marginEnd="80dp"
+                    android:layout_below="@+id/delivery_address"
+                    />
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:id="@+id/input_layout"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="50dp"
+                   android:clickable="false"
+                   android:layout_below="@id/delivery_contact"
+                   app:suffixText=" in Kg"
+                   app:hintEnabled="false"
+                   >
+                   <EditText
+                       android:id="@+id/weightEditText"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentLeft="true"
+                       android:layout_marginStart="20dp"
+                       android:padding="10dp"
+                       android:ems="10"
+                       android:textColor="#5b5b5b"
+                       android:textCursorDrawable="@null"
+                       android:inputType="numberDecimal"
+                       android:hint="Content Weight"
+                       android:background="@drawable/grey_border"
+                       android:layout_marginEnd="150dp"
+                       />
+
+               </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/requestButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/input_layout"
+                    android:onClick="request"
+                    android:text="Request"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="60dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/button_background"
+                    />
+
+            </RelativeLayout>
+        </ScrollView>
+</LinearLayout>
+
+
+</LinearLayout>
+
+
